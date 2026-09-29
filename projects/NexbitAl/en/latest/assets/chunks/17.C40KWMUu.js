@@ -1,1 +1,1 @@
-const s="/projects/NexbitAl/en/latest/assets/15.Be0YhmXG.png",t="/projects/NexbitAl/en/latest/assets/16.B0SzEvTh.png",e="/projects/NexbitAl/en/latest/assets/17.gD4WXimG.png";export{s as _,t as a,e as b};
+const s="/projects/NexbitAl/en/latest/assets/15.Be0YhmXG.webp",t="/projects/NexbitAl/en/latest/assets/16.B0SzEvTh.webp",e="/projects/NexbitAl/en/latest/assets/17.gD4WXimG.webp";export{s as _,t as a,e as b};

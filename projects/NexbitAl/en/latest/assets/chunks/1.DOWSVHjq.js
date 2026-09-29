@@ -1,1 +1,1 @@
-const s="/projects/NexbitAl/en/latest/assets/1.BVaRuK9D.png";export{s as _};
+const s="/projects/NexbitAl/en/latest/assets/1.BVaRuK9D.webp";export{s as _};
