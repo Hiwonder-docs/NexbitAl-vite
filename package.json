@@ -1,9 +1,16 @@
 {
+  "name": "NexbitAl-vite",
+  "private": true,
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:dev": "node scripts/dev_version.mjs latest",
+    "dev:latest": "node scripts/dev_version.mjs latest",
+    "docs:build": "node scripts/build_version.mjs latest",
     "docs:preview": "vitepress preview docs",
-    "docs:stage-main": "node scripts/stage_main_site.mjs"
+    "docs:stage-main": "node scripts/stage_main_site.mjs",
+    "build:latest": "node scripts/build_version.mjs latest",
+    "build:all": "node scripts/build_version.mjs latest && node scripts/build_version.mjs standard",
+    "dev:standard": "node scripts/dev_version.mjs standard",
+    "build:standard": "node scripts/build_version.mjs standard"
   },
   "dependencies": {
     "vitepress": "^1.6.4"
