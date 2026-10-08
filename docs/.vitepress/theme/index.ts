@@ -4,6 +4,7 @@ import { useData, useRoute } from 'vitepress'
 import './custom.css'
 import Layout from './Layout.vue'
 import Pdf from './Pdf.vue'
+import FeishuForm from './FeishuForm.vue'
 
 function collectLockedLinks(items: any[], links = new Set<string>()) {
   for (const item of items || []) {
@@ -106,7 +107,7 @@ export default {
   enhanceApp(ctx: any) {
     DefaultTheme.enhanceApp?.(ctx)
     ctx.app.component('Pdf', Pdf)
+    ctx.app.component('FeishuForm', FeishuForm)
   },
   Layout: () => h(Layout, null, { 'layout-bottom': () => h(LockedSidebarMarker) }),
 }
-
