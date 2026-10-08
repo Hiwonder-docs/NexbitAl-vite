@@ -9,7 +9,7 @@ const props = withDefaults(
   }>(),
   {
     title: 'MakeCode Project',
-    height: 500,
+    height: 800,
   },
 )
 
@@ -22,21 +22,6 @@ const projectUrl = computed(() => {
   }
 })
 
-const frameSrc = computed(() => {
-  const url = projectUrl.value
-  if (!url) return ''
-
-  const projectId = url.pathname.replace(/^\/|\/$/g, '')
-  if (
-    url.hostname === 'makecode.microbit.org' &&
-    /^(?:_[a-zA-Z0-9]+|\d+(?:-\d+){3})$/.test(projectId)
-  ) {
-    return `${url.origin}/---codeembed#pub:${projectId}`
-  }
-
-  return url.href
-})
-
 const frameHeight = computed(() => {
   return typeof props.height === 'number' ? `${props.height}px` : props.height
 })
@@ -46,7 +31,7 @@ const frameHeight = computed(() => {
   <div v-if="projectUrl" class="feishu-form">
     <iframe
       class="feishu-form__frame"
-      :src="frameSrc"
+      :src="projectUrl.href"
       :title="title"
       :style="{ height: frameHeight }"
       width="100%"
@@ -69,8 +54,8 @@ const frameHeight = computed(() => {
   width: 100%;
   margin-bottom: 8px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  background: #fff;
 }
 
 .feishu-form > a {
